@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 
 using namespace std;
 /*
@@ -93,7 +94,7 @@ void ejercicio29();
 
 int main()
 {
-    ejercicio3();
+    ejercicio15();
     return 0;
 }
 
@@ -115,4 +116,90 @@ void ejercicio3()
         cout << "El número mayor es: " << b << endl;
     }
 }
+void ejercicio5()
+{
+    float a, b;
+    cout << "Ingrese dos números: ";
+    cin >> a >> b;
+    float resultado = a / b;
+    cout << "El resultado de la división " << a << " / " << b << " con redondeo es: " << round(resultado) << endl;
+}
+void ejercicio7()
+{
+    int N, suma;
+    cout << "Ingrese un número: ";
+    cin >> N;
+    suma = (N * (N + 1)) / 2;
+    cout << "La suma de los números de 0 a " << N << " es: " << suma << endl;
+}
+void ejercicio9()
+{
+    double PI = 3.1416;
+    float  N;
 
+    cout << "Ingrese el radio del círculo: ";
+    cin >> N;
+
+    double perimetro = 2 * PI * N;
+    double area = PI * N * N;
+
+    cout << "El perímetro del círculo es: " << perimetro << endl;
+    cout << "El área del círculo es: " << area << endl;
+}
+void ejercicio11()
+{
+    int N;
+    cout << "Ingrese un número: ";
+    cin >> N;
+
+    cout << "Tabla de multiplicar del " << N << ":" << endl;
+    for (int i = 1; i <= 10; i++) {
+        cout << N << " x " << i << " = " << (N * i) << endl;
+    }
+}
+void ejercicio13()
+{
+    int N;
+    cout << "Ingrese un número: ";
+    cin >> N;
+
+    cout << "Los divisores de " << N << " son: ";
+    for (int i = 1; i <= N; i++)
+        if (N % i == 0) {
+            cout << i << " ";
+        }
+}
+void ejercicio15()
+{
+    int numero, suma = 0;
+
+    cout << "Ingrese números (0 para terminar):" << endl;
+    while (true) {
+        cin >> numero;
+
+        if (numero == 0) {
+            break;
+        }
+
+        suma += numero;
+    }
+    cout << "La suma de los números ingresados es: " << suma << endl;
+}
+void ejercicio17()
+{
+    int n, mayor = INT_MIN;
+
+    cout << "Ingrese números (0 para terminar):" << endl;
+    while (true) {
+        cin >> n;
+
+        if (n == 0) {
+            break;
+        }
+
+        if (n > mayor) {
+            mayor = n;
+        }
+        cout << "El mayor número ingresado es: " << mayor << endl;
+    }
+}
